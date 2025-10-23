@@ -30,15 +30,18 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-nav.menu ul {
+nav#menu ul {
   list-style: none;
   display: flex;
   gap: 10px;
 }
 
-nav.menu a {
+nav#menu a {
   text-decoration: none;
   color: var(--texto-inverso);
   font-weight: 600;
@@ -47,7 +50,7 @@ nav.menu a {
   transition: background-color 0.5s, color 0.5s;
 }
 
-nav.menu a:hover {
+nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
@@ -60,14 +63,14 @@ main {
 
 }
 
-section.ficha {
+section#ficha {
   background-color: var(--fundo-card);
   padding: 20px;
   border-radius: 8px;
   grid-column: 2;
 }
 
-section.ficha img.foto {
+section#ficha img.foto {
   width: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -80,14 +83,14 @@ section.ficha img.foto {
   margin-bottom: 15px;
 }
 
-section.ficha h1 {
+section#ficha h1 {
   color: var(--destaque);
   margin: 15px 0;
   font-size: 1.5em;
   text-align: left;
 }
 
-div.social {
+div#social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,16 +99,16 @@ div.social {
   margin-top: 15px;
 }
 
-div.social a {
+div#social a {
   color: var(--destaque);
 }
 
-div.social a:hover {
+div#social a:hover {
   color: var(--destaque-inverso);
   transition: color 0.5s;
 }
 
-section.detalhes {
+section#detalhes {
   grid-column: 2;
 }
 
@@ -121,7 +124,7 @@ article h2 {
   margin-bottom: 20px;
 }
 
-article.video .video-container {
+article#video .video-container {
   position: relative;
   width: 100%;
   margin: auto;
@@ -138,75 +141,139 @@ article.video .video-container {
   border-radius: 8px;
 }
 
-.skill-container {
+#skill-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
 }
 
-.skill-container .info {
+#skill-container .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.skill-container .nome {
+#skill-container .nome {
   font-weight: bold;
   color: var(--texto);
 }
 
-.skill-container .porcent {
+#skill-container .porcent {
   font-weight: bold;
   color: var(--destaque);
 }
 
-.skill-container .barra {
+#skill-container .barra {
   width: 100%;
   height: 8px;
   background-color: var(--fundo-principal);
   border-radius: 4px;
 }
 
-.skill-container .progresso {
+#skill-container .progresso {
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
 }
 
-.formacao-container {
+#formacao-container {
   display: flex;
   flex-direction: column-reverse;
   gap: 20px;
 }
 
-.formacao-container .curso {
+#formacao-container .curso {
   background-color: var(--fundo-principal);
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
   padding-left: 15px;
 }
 
-.formacao-container .curso:hover {
+#formacao-container .curso:hover {
   border-left-width: 15px;
   border-color: var(--destaque);
   transition: border-width 0.5s;
   cursor: pointer;
 }
 
-.formacao-container .periodo {
+#formacao-container .periodo {
   font-size: 0.8em;
   font-weight: bold;
   color: var(--texto);
 
 }
 
-.formacao-container .instituicao {
+#formacao-container .instituicao {
   color: var(--destaque);
   font-size: 1.1em;
 }
 
+
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container #projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+}
+
+#projeto-container #projeto:hover {
+  border-color: var(--destaque);
+  border-left-width: 15px;
+  transition: border-color 0.5s, border-width 0.5s;
+  cursor: pointer;
+}
+
+#projeto-container .foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
+}
+
 @media screen and (min-width: 768px) {
-  .skill-container {
+  #skill-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #projeto-container #projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 30%;
+    max-height: 230px;
   }
 }

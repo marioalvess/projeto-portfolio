@@ -10,24 +10,24 @@
 </head>
 <body>
     <header>
-        <nav class="menu">
+        <nav id="menu">
         <ul>
-            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-brain"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-graduation-cap"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-trowel-bricks"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-moon"></i></a></li>
+            <li><a href="#ficha" class="link"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#skills" class="link"><i class="fa-solid fa-brain"></i></a></li>
+            <li><a href="#formacao" class="link"><i class="fa-solid fa-graduation-cap"></i></a></li>
+            <li><a href="#projetos" class="link"><i class="fa-solid fa-trowel-bricks"></i></a></li>
+            <li><a href="#" id="botao-tema"><i class="fa-solid fa-moon"></i></a></li>
         </ul>
         </nav>
 
     </header>
     <main>
-        <section class="ficha">
+        <section id="ficha">
             <img src="imagens/guanabara-perfil.jpg" alt="Gustavo Guanabara" class="foto">
             <h1>Gustavo Guanabara</h1>
             <p>Formado em Ciência da Computação, com especialização em docência superior, desenvolvimento web e inteligência artificial. Apaixonado por tecnologia e sempre em busca de novos desafios. Atualmente, atuo como professor e desenvolvedor, compartilhando conhecimento através de cursos online e projetos de código aberto.
             </p>
-            <div class="social">
+            <div id="social">
                 <a href="https://br.linkedin.com/in/guanabara" target="_blank" rel="nofollow"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://gustavoguanabara.github.io/" target="_blank" rel="nofollow"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.instagram.com/gustavoguanabara/" target="_blank" rel="nofollow"><i class="fa-brands fa-instagram"></i></a>
@@ -35,8 +35,8 @@
             </div>
 
         </section>
-        <section class="detalhes">
-            <article class="video">
+        <section id="detalhes">
+            <article id="video">
                 <h2><i class="fa-solid fa-handshake"></i> Deixe-me apresentar</h2>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/vl0eatPehLs?si=5iV2BnH9OLlB-m9n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -44,9 +44,9 @@
 
             </article> <!-- Fim article.video-->
             
-            <article class="skills">
+            <article id="skills">
                 <h2><i class="fa-solid fa-brain"></i> Minhas Skills</h2>
-                <div class="skill-container">
+                <div id="skill-container">
                     <div class="item">
                         <div class="info">
                             <span class="nome">
@@ -136,9 +136,9 @@
 
             </article><!-- Fim article.skills-->
             
-            <article class="formacao">
+            <article id="formacao">
                 <h2><i class="fa-solid fa-graduation-cap"></i> Formação</h2>
-                <div class="formacao-container">
+                <div id="formacao-container">
                     <div class="curso">
                         <p class="periodo">1991 - 1994</p>
                         <h3 class="instituicao"> Escola Técnica Carioca</h3>
@@ -159,16 +159,65 @@
 
             </article><!-- Fim article.formacao-->
             
-            <article class="projetos">
+            <article id="projetos">
                 <h2><i class="fa-solid fa-trowel-bricks"></i> Projetos</h2>
-
+                <div id="projeto-container">
+                    <div id="projeto"> <!-- projeto 01 -->
+                        <img src="imagens/projeto-01-videos.jpg" alt="Projeto 1" class="foto">
+                        <div class="projeto-info">
+                            <p class="periodo">2022</p>
+                            <h3 class="titulo">Projeto de Vídeos</h3>
+                            <p>Projeto construído para treinar a inserção de vídeos em nosso site.</p>
+                            <details class="descrição">
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus voluptatum vitae beatae magnam, dolores nihil. Veritatis ex consequatur eum itaque atque praesentium! Aperiam dicta nisi quos? Voluptatibus rerum blanditiis voluptates?</p>
+                            </details>
+                        </div>
+                    </div>
+                    <div id="projeto"> <!-- projeto 02 -->
+                        <img src="imagens/projeto-02-cordel.jpg" alt="Projeto 2" class="foto">
+                        <div class="projeto-info">
+                            <p class="periodo">2023</p>
+                            <h3 class="titulo">Projeto Cordel</h3>
+                            <p>Projeto construído para treinar efeito paralax em imagens.</p>
+                            <details class="descrição">
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus voluptatum vitae beatae magnam, dolores nihil. Veritatis ex consequatur eum itaque atque praesentium! Aperiam dicta nisi quos? Voluptatibus rerum blanditiis voluptates?</p>
+                            </details>
+                        </div>
+                    </div>
+                    <div id="projeto"> <!-- projeto 03 -->
+                        <img src="imagens/projeto-03-android.jpg" alt="Projeto 3" class="foto">
+                        <div class="projeto-info">
+                            <p class="periodo">2023</p>
+                            <h3 class="titulo">Projeto Android</h3>
+                            <p>Projeto construído para treinar conteúdos e imagens dinâmicas.</p>
+                            <details class="descrição">
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus voluptatum vitae beatae magnam, dolores nihil. Veritatis ex consequatur eum itaque atque praesentium! Aperiam dicta nisi quos? Voluptatibus rerum blanditiis voluptates?</p>
+                            </details>
+                        </div>
+                    </div>
+                    <div id="projeto"> <!-- projeto 04 -->
+                        <img src="imagens/projeto-04-links.jpg" alt="Projeto 4" class="foto">
+                        <div class="projeto-info">
+                            <p class="periodo">2023</p>
+                            <h3 class="titulo">Projeto Iframe</h3>
+                            <p>Projeto construído para treinar o uso de links e iframe.</p>
+                            <details class="descrição">
+                                <summary>Saiba mais...</summary>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus voluptatum vitae beatae magnam, dolores nihil. Veritatis ex consequatur eum itaque atque praesentium! Aperiam dicta nisi quos? Voluptatibus rerum blanditiis voluptates?</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>               
             </article><!-- Fim article.projetos-->
 
         </section>
 
     </main>
     <footer>
-
+        Portfólio desenvolvido por <a href="https://www.cursoemvideo.com/" target="_blank" rel="nofollow">Curso em Vídeo</a> em 2025
     </footer>
     <script src="scripts/script.js"></script>
 </body>
